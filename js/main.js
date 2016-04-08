@@ -3,6 +3,6 @@ function getData(faskes) {
   ref.once("value", function(snapshot) {
     var data = snapshot.numChildren();
     alert('The total is:' + data);
+    console.log('Url: ' + ref);
   });
-
 }
