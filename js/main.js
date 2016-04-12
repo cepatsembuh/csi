@@ -1,5 +1,9 @@
+'use strict';
+var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
+
 function getData(faskes) {
-  var ref = new Firebase("https://cepatsembuh.firebaseio.com/" + faskes + '/pasien');
+  'use strict';
+  dataRef = new Firebase(ref + faskes + '/pasien');
   alert('Syncing data..');
   ref.once("value", function(snapshot) {
     var data = snapshot.numChildren();
