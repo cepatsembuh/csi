@@ -9,7 +9,7 @@ function getData(faskes) {
   'use strict';
   dataRef = new Firebase(ref + faskes + '/pasien');
   alert('Syncing data..');
-  ref.once("value", function(snapshot) {
+  dataRef.once("value", function(snapshot) {
     var data = snapshot.numChildren();
     alert('The total is:' + data);
     console.log('Url: ' + ref);
