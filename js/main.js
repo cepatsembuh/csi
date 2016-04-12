@@ -3,11 +3,11 @@
 * Copyright 2016 Cepat Sembuh
 */
 'use strict';
-var ref = new Firebase("https://cepatsembuh.firebaseio.com/");
+var dataUrl = "https://cepatsembuh.firebaseio.com/"
 
 function getData(faskes) {
   'use strict';
-  dataRef = new Firebase(ref + faskes + '/pasien');
+  var dataRef = new Firebase(dataUrl + faskes + '/pasien');
   alert('Syncing data..');
   dataRef.once("value", function(snapshot) {
     var data = snapshot.numChildren();
