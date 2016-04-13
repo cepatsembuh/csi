@@ -5,7 +5,7 @@
 'use strict';
 var dataUrl = "https://cepatsembuh.firebaseio.com/"
 
-function getData(faskes) {
+function getPasien(faskes) {
   'use strict';
   var dataRef = new Firebase(dataUrl + faskes + '/pasien');
   alert('Syncing data..');
