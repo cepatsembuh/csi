@@ -15,3 +15,14 @@ function getPasien(faskes) {
     console.log('Url: ' + ref);
   });
 }
+
+function getFaskes(faskes) {
+  'use strict';
+  var dataRef = new Firebase(dataUrl + faskes + '/faskes');
+  alert('Syncing data..');
+  dataRef.once("value", function(snapshot) {
+    var data = snapshot.numChildren();
+    alert('The total is:' + data);
+    console.log('Url: ' + ref);
+  });
+}
