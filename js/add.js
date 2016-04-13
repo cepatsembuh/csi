@@ -18,7 +18,32 @@ function submitFaskes() {
           nama: nama
         })
       break;
-    default:
+    case "rsud":
+        faskes = ref.child("rsud");
+        faskesVariable = faskes.child("pasien")
+        newFaskes = faskesVariable.child(nama);
 
+        newFaskes.set({
+          nama: nama
+        })
+      break;
+    case "rsuk":
+        faskes = ref.child("rsuk");
+        faskesVariable = faskes.child("pasien")
+        newFaskes = faskesVariable.child(nama);
+
+        newFaskes.set({
+          nama: nama
+        })
+      break;
+    case "rss":
+        faskes = ref.child("rss");
+        faskesVariable = faskes.child("pasien")
+        newFaskes = faskesVariable.child(nama);
+
+        newFaskes.set({
+          nama: nama
+        })
+      break;
   }
 }
