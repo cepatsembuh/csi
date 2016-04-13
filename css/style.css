@@ -5,3 +5,8 @@
 body {
   margin-top: 15px;
 }
+
+.form-control {
+  width: 250px;
+  height: 50px;
+}
