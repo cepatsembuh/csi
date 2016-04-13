@@ -21,6 +21,9 @@ function submitFaskes() {
             faskesVariable = faskes.child("pasien")
             newFaskes = faskesVariable.child(nama);
 
+            // Log input value for testing
+            console.log('Pushing data to firebase');
+
             // Push data to firebase
             newFaskes.set({
               nama: nama
@@ -31,6 +34,9 @@ function submitFaskes() {
             faskes = ref.child("rsud");
             faskesVariable = faskes.child("pasien")
             newFaskes = faskesVariable.child(nama);
+
+            // Log input value for testing
+            console.log('Pushing data to firebase');
 
             // Push data to firebase
             newFaskes.set({
@@ -43,6 +49,9 @@ function submitFaskes() {
             faskesVariable = faskes.child("pasien")
             newFaskes = faskesVariable.child(nama);
 
+            // Log input value for testing
+            console.log('Pushing data to firebase');
+
             // Push data to firebase
             newFaskes.set({
               nama: nama
@@ -53,6 +62,9 @@ function submitFaskes() {
             faskes = ref.child("rss");
             faskesVariable = faskes.child("pasien")
             newFaskes = faskesVariable.child(nama);
+
+            // Log input value for testing
+            console.log('Pushing data to firebase');
 
             // Push data to firebase
             newFaskes.set({
