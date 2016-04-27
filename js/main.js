@@ -2,7 +2,6 @@
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
 */
-'use strict';
 var dataUrl = "https://cepatsembuh.firebaseio.com/";
 
 function getPasien(faskes) {
@@ -15,7 +14,7 @@ function getPasien(faskes) {
   // Show data
   dataRef.once("value", function(snapshot) {
     var data = snapshot.numChildren();
-    alert('The total is:' + data);    
+    alert('The total is:' + data);
   });
 }
 
@@ -29,7 +28,7 @@ function getFaskes(faskes) {
   // Show data
   dataRef.once("value", function(snapshot) {
     var data = snapshot.numChildren();
-    alert('The total is:' + data);    
+    alert('The total is:' + data);
   });
 }
 
