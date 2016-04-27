@@ -31,3 +31,18 @@ function link(page) {
   var url = page + '.html';
   window.location.href = url;
 }
+
+function updateBed() {
+  var nama = $('#nama').val(),
+      username = $('#username').val(),
+      tipe = $('#tipe').val(),
+      data = $('#avicii').val();
+
+  console.log('Defining firebase URL...');
+  var ref = new Firebase(dataUrl + tipe + '/faskes/' + username);
+
+  console.log('Updating data...');
+  ref.update({
+    tempat_tidur: data
+  })
+}
