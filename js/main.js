@@ -3,7 +3,7 @@
 * Copyright 2016 Cepat Sembuh
 */
 'use strict';
-var dataUrl = "https://cepatsembuh.firebaseio.com/"
+var dataUrl = "https://cepatsembuh.firebaseio.com/";
 
 function getPasien(faskes) {
   'use strict';
