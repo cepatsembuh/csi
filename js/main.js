@@ -6,24 +6,30 @@
 var dataUrl = "https://cepatsembuh.firebaseio.com/";
 
 function getPasien(faskes) {
-  'use strict';
+  // Firebase ref
   var dataRef = new Firebase(dataUrl + faskes + '/pasien');
+
+  // Friendly message
   alert('Syncing data..');
+
+  // Show data
   dataRef.once("value", function(snapshot) {
     var data = snapshot.numChildren();
-    alert('The total is:' + data);
-    console.log('Url: ' + ref);
+    alert('The total is:' + data);    
   });
 }
 
 function getFaskes(faskes) {
-  'use strict';
+  // Firebase ref
   var dataRef = new Firebase(dataUrl + faskes + '/faskes');
+
+  // Friendly message
   alert('Syncing data..');
+
+  // Show data
   dataRef.once("value", function(snapshot) {
     var data = snapshot.numChildren();
-    alert('The total is:' + data);
-    console.log('Url: ' + ref);
+    alert('The total is:' + data);    
   });
 }
 
