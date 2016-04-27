@@ -37,12 +37,16 @@ function updateBed() {
       tipe = $('#tipe').val(),
       data = $('#avicii').val();
 
-  console.log('Defining firebase URL...');
-  var ref = new Firebase(dataUrl + tipe + '/faskes/' + username),
-      unString = Number(data);
+  if (username === '' || tipe === '' || data === '') {
+    alert("Mohon isi semua input");
+  } else {
+    console.log('Defining firebase URL...');
+    var ref = new Firebase(dataUrl + tipe + '/faskes/' + username),
+        unString = Number(data);
 
-  console.log('Updating data...');
-  ref.update({
-    tempat_tidur: unString
-  })
+    console.log('Updating data...');
+    ref.update({
+      tempat_tidur: unString
+    });
+  }
 }
