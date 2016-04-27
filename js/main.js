@@ -26,3 +26,8 @@ function getFaskes(faskes) {
     console.log('Url: ' + ref);
   });
 }
+
+function link(page) {
+  url = page + '.html';
+  window.location.href = url;
+}
