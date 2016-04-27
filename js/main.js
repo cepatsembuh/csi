@@ -28,6 +28,6 @@ function getFaskes(faskes) {
 }
 
 function link(page) {
-  url = page + '.html';
+  var url = page + '.html';
   window.location.href = url;
 }
