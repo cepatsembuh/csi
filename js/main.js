@@ -40,12 +40,16 @@ function updateBed() {
   if (username === '' || tipe === '' || data === '') {
     alert("Mohon isi semua input");
   } else {
+    // Define firebase URL
     console.log('Defining firebase URL...');
     var ref = new Firebase(dataUrl + tipe + '/faskes/' + username),
         unString = Number(data);
 
+    // Friendly message
     console.log('Updating data...');
     alert('Updating data...');
+
+    // Update the data
     ref.update({
       tempat_tidur: unString
     }, function(error){
