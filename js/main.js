@@ -47,6 +47,11 @@ function updateBed() {
     console.log('Updating data...');
     ref.update({
       tempat_tidur: unString
+    }, function(error){
+      if (!error) {
+        // Reload page
+        location.reload();
+      }
     });
   }
 }
