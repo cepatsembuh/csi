@@ -38,10 +38,11 @@ function updateBed() {
       data = $('#avicii').val();
 
   console.log('Defining firebase URL...');
-  var ref = new Firebase(dataUrl + tipe + '/faskes/' + username);
+  var ref = new Firebase(dataUrl + tipe + '/faskes/' + username),
+      unString = Number(data);
 
   console.log('Updating data...');
   ref.update({
-    tempat_tidur: data
+    tempat_tidur: unString
   })
 }
