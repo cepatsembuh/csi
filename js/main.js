@@ -33,8 +33,7 @@ function link(page) {
 }
 
 function updateBed() {
-  var nama = $('#nama').val(),
-      username = $('#username').val(),
+  var username = $('#username').val(),
       tipe = $('#tipe').val(),
       data = $('#avicii').val();
 
