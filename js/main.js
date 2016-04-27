@@ -45,6 +45,7 @@ function updateBed() {
         unString = Number(data);
 
     console.log('Updating data...');
+    alert('Updating data...')
     ref.update({
       tempat_tidur: unString
     }, function(error){
