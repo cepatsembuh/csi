@@ -40,8 +40,8 @@ function link(page) {
 function updateBed() {
   var username = $('#username').val(),
       tipe = $('#tipe').val(),
-      brea = $('#brea').val(),
       breanna = $('#breanna').val(),
+      brea = $('#brea').val(),
       yde = $('#yde').val();
 
   if (username === '' || tipe === '' || brea === '' || breanna === '' || yde === '') {
@@ -49,8 +49,10 @@ function updateBed() {
   } else {
     // Define firebase URL
     console.log('Defining firebase URL...');
-    var ref = new Firebase(dataUrl + tipe + '/faskes/' + username),
-        unString = Number(data);
+    var ref = new Firebase(dataUrl + tipe + '/faskes/' + username + '/tempat_tidur'),
+        brea_is_pretty = Number(breanna),
+        brea_is_beatiful = Number(brea),
+        crush_on_brea = Number(yde);
 
     // Friendly message
     console.log('Updating data...');
@@ -58,7 +60,9 @@ function updateBed() {
 
     // Update the data
     ref.update({
-      tempat_tidur: unString
+      satu: brea_is_pretty,
+      dua: brea_is_beatiful,
+      tiga: crush_on_brea
     }, function(error){
       if (!error) {
         // Reload page
