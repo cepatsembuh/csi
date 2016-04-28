@@ -40,9 +40,11 @@ function link(page) {
 function updateBed() {
   var username = $('#username').val(),
       tipe = $('#tipe').val(),
-      data = $('#avicii').val();
+      brea = $('#brea').val(),
+      breanna = $('#breanna').val(),
+      yde = $('#yde').val();
 
-  if (username === '' || tipe === '' || data === '') {
+  if (username === '' || tipe === '' || brea === '' || breanna === '' || yde === '') {
     alert("Mohon isi semua input");
   } else {
     // Define firebase URL
