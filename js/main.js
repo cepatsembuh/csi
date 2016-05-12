@@ -2,7 +2,7 @@
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
 */
-var dataUrl = "https://cepatsembuh.firebaseio.com/";
+var dataUrl = 'https://cepatsembuh.firebaseio.com/';
 
 function getPasien(faskes) {
   // Firebase ref
@@ -12,7 +12,7 @@ function getPasien(faskes) {
   alert('Syncing data..');
 
   // Show data
-  dataRef.once("value", function(snapshot) {
+  dataRef.once('value', function(snapshot) {
     var data = snapshot.numChildren();
     alert('The total is:' + data);
   });
@@ -26,7 +26,7 @@ function getFaskes(faskes) {
   alert('Syncing data..');
 
   // Show data
-  dataRef.once("value", function(snapshot) {
+  dataRef.once('value', function(snapshot) {
     var data = snapshot.numChildren();
     alert('The total is:' + data);
   });
@@ -45,7 +45,7 @@ function updateBed() {
       yde = $('#yde').val();
 
   if (username === '' || tipe === '' || brea === '' || breanna === '' || yde === '') {
-    alert("Mohon isi semua input");
+    alert('Mohon isi semua input');
   } else {
     // Define firebase URL
     console.log('Defining firebase URL...');
@@ -87,7 +87,7 @@ function totalPasien() {
   alert('Syncing data..');
 
   // Show data
-   dataRef.once("value", function(snapshot) {
+   dataRef.once('value', function(snapshot) {
     var data = snapshot.numChildren();
     alert('Jumlah Pasien:' + data);
   });
