@@ -67,6 +67,9 @@ function updateBed() {
       if (!error) {
         // Reload page
         location.reload();
+      } else {
+        // Error handler
+        alert('Gagal meng-update data')
       }
     });
   }
