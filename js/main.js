@@ -55,8 +55,9 @@ function updateBed() {
         crush_on_brea = Number(yde);
 
     // Friendly message
-    console.log('Updating data...');
-    alert('Updating data...');
+    update = 'Updating data...';
+    console.log(update);
+    alert(update);
 
     // Update the data
     ref.update({
