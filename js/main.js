@@ -76,6 +76,7 @@ function updateBed() {
 }
 
 function totalPasien() {
+  // Get input value
   var username = $('#username').val(),
       tipe = $('#tipe').val();
 
