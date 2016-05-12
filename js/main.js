@@ -71,3 +71,21 @@ function updateBed() {
     });
   }
 }
+
+function totalPasien() {
+  var username = $('#username').val(),
+      tipe = $('#tipe').val();
+
+  // Firebase ref
+  var url = dataUrl + tipe + '/faskes/' + username + '/pasien';
+  var dataRef = new Firebase(url);
+
+  // Friendly message
+  alert('Syncing data..');
+
+  // Show data
+   dataRef.once("value", function(snapshot) {
+    var data = snapshot.numChildren();
+    alert('Jumlah Pasien:' + data);
+  });
+}
