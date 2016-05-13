@@ -2,7 +2,7 @@
 * Cepat Sembuh v1.0
 * Copyright 2016 Cepat Sembuh
 */
-var dataUrl = 'https://cepatsembuh.firebaseio.com/';
+var dataUrl = 'http://cepatsembuh.firebaseio.com/';
 
 function getPasien(faskes) {
   // Firebase ref
