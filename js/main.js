@@ -4,9 +4,9 @@
 */
 var dataUrl = 'http://cepatsembuh.firebaseio.com/';
 
-function getPasien(faskes) {
+function getPasien(tipe) {
   // Firebase ref
-  var dataRef = new Firebase(dataUrl + faskes + '/pasien');
+  var dataRef = new Firebase(dataUrl + tipe + '/pasien');
 
   // Friendly message
   alert('Syncing data..');
@@ -18,9 +18,9 @@ function getPasien(faskes) {
   });
 }
 
-function getFaskes(faskes) {
+function getFaskes(tipe) {
   // Firebase ref
-  var dataRef = new Firebase(dataUrl + faskes + '/faskes');
+  var dataRef = new Firebase(dataUrl + tipe + '/faskes');
 
   // Friendly message
   alert('Syncing data..');
