@@ -44,8 +44,10 @@ function updateBed() {
       brea = $('#brea').val(),
       yde = $('#yde').val();
 
-  if (username === '' || tipe === '' || brea === '' || breanna === '' || yde === '') {
+  if (username === '' || tipe === '') {
     alert('Mohon isi semua input');
+  } else if (brea === '' || breanna === '' || yde === '') {
+    alert('Data Tempat-Tidur tidak valid ');
   } else {
     // Define firebase URL
     console.log('Defining firebase URL...');
