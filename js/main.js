@@ -98,14 +98,18 @@ function totalPasien() {
 }
 
 function brea_yde() {
+  // Get input value
   var username = $('#username').val(),
       tipe = $('#tipe').val();
 
+  // Firebase ref
   var url = dataUrl + tipe + '/faskes/' + username,
       dataRef = new Firebase(url);
 
+  // Friendly message
   alert('Updating data..');
 
+  // Update the data
   dataRef.update({
     antrian: 0
   })
