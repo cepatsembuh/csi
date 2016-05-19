@@ -84,8 +84,8 @@ function totalPasien() {
       tipe = $('#tipe').val();
 
   // Firebase ref
-  var url = dataUrl + tipe + '/faskes/' + username + '/pasien';
-  var dataRef = new Firebase(url);
+  var url = dataUrl + tipe + '/faskes/' + username + '/pasien',
+      dataRef = new Firebase(url);
 
   // Friendly message
   alert('Syncing data..');
