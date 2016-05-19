@@ -96,3 +96,17 @@ function totalPasien() {
     alert('Jumlah Pasien:' + data);
   });
 }
+
+function brea_yde() {
+  var username = $('#username').val(),
+      tipe = $('#tipe').val();
+
+  var url = dataUrl + tipe + '/faskes/' + username,
+      dataRef = new Firebase(url);
+
+  alert('Updating data..');
+
+  dataRef.update({
+    antrian: 0
+  })
+}
