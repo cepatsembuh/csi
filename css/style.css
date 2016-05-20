@@ -10,3 +10,9 @@ body {
   width: 250px;
   height: 50px;
 }
+
+.btn-joey {
+  background: #36D7B7;
+  border: #36D7B7;
+  color: #fff;
+}
