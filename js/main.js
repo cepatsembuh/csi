@@ -6,7 +6,7 @@ var dataUrl = 'http://cepatsembuh.firebaseio.com/';
 
 function getPasien(tipe) {
   // Firebase ref
-  var dataRef = new Firebase(dataUrl + tipe + '/pasien');
+  var dataRef = new Firebase(dataUrl + 'puskesmas' + '/pasien');
 
   // Friendly message
   alert('Syncing data..');
@@ -20,7 +20,7 @@ function getPasien(tipe) {
 
 function getFaskes(tipe) {
   // Firebase ref
-  var dataRef = new Firebase(dataUrl + tipe + '/faskes');
+  var dataRef = new Firebase(dataUrl + 'puskesmas' + '/faskes');
 
   // Friendly message
   alert('Syncing data..');
@@ -38,20 +38,19 @@ function link(page) {
 }
 
 function updateBed() {
-  var username = $('#username').val(),
-      tipe = $('#tipe').val(),
+  var username = $('#username').val();      
       breanna = $('#breanna').val(),
       brea = $('#brea').val(),
       yde = $('#yde').val();
 
-  if (username === '' || tipe === '') {
+  if (username === '' ) {
     alert('Mohon isi semua input');
   } else if (brea === '' || breanna === '' || yde === '') {
     alert('Data Tempat-Tidur tidak valid ');
   } else {
     // Define firebase URL
     console.log('Defining firebase URL...');
-    var ref = new Firebase(dataUrl + tipe + '/faskes/' + username + '/tempat_tidur'),
+    var ref = new Firebase(dataUrl + 'puskesmas' + '/faskes/' + username + '/tempat_tidur'),
         brea_is_pretty = Number(breanna),
         brea_is_beatiful = Number(brea),
         crush_on_brea = Number(yde);
@@ -80,11 +79,10 @@ function updateBed() {
 
 function totalPasien() {
   // Get input value
-  var username = $('#username').val(),
-      tipe = $('#tipe').val();
+  var username = $('#username').val();      
 
   // Firebase ref
-  var url = dataUrl + tipe + '/faskes/' + username + '/pasien',
+  var url = dataUrl + 'puskesmas' + '/faskes/' + username + '/pasien',
       dataRef = new Firebase(url);
 
   // Friendly message
@@ -99,11 +97,10 @@ function totalPasien() {
 
 function brea_yde() {
   // Get input value
-  var username = $('#username').val(),
-      tipe = $('#tipe').val();
+  var username = $('#username').val();      
 
   // Firebase ref
-  var url = dataUrl + tipe + '/faskes/' + username,
+  var url = dataUrl + 'puskesmas' + '/faskes/' + username,
       dataRef = new Firebase(url);
 
   // Friendly message
